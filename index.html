@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site da Igreja Batista do avivamento de Nova Cruz." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Batista do Avivamento</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="/assets/logo.jpg" alt="logo Batista do Avivamento" />
+      <div>
+        <h1>Igreja Batista do avivamento - Nova Cruz/RN</h1>
+        <p>Igreja na Visão Celular no Modelo dos 12</p>
+      </div>
+    </nav>
+    <main id="main">
+      <header>
+        <h1 class="title">CALCULADORA DE TRIBUTOS</h1>
+        <div class="description">
+          <p class="sub-title">
+            Para realizar os cálculos do Dízimo e Primícia, basta informar sua remuneração.
+          </p>
+          <span class="info">
+            A Primícia é calculado em cima da remuneração. O Dízimo, será sobre o valor restante.
+          </span>
+        </div>
+      </header>
+      <section class="content" id="content">
+        <form class="form">
+          <label class="label"></label>
+          <input
+            name="remuneration"
+            id="remuneration"
+            placeholder="Informe sua remuneração"
+            oninput="formatCurrency(this)"
+            step="1"
+            value="R$ 0,00"
+          />
+        </form>
+        <div class="rates">
+          <div class="card">
+            <h3>Primícia</h3>
+            <div class="fist" id="fist">(valor/30): R$ 0,00</div>
+          </div>
+          <div class="card">
+            <h3>Dízimo</h3>
+            <p class="tenth" id="tenth">(10%): R$ 0,00</p>
+          </div>
+        </div>
+        <div>
+          <button class="pdf" onclick="generatePDF()">Gerar PDF</button>
+        </div>
+        <div class="mesage">
+          <p>"Ninguém apareça diante de mim de mãos vazias"</p>
+          <h3>"Êxodo 34:20b"</h3>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>

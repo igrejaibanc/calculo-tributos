@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #001525;
+  padding: 1rem 6rem;
+  box-shadow: 0px 0px 10px black;
+}
+
+nav div {
+  margin-left: 2rem;
+  color: white;
+}
+
+img {
+  width: 4rem;
+}
+
+main {
+  display: flex; /* Adicionado para garantir que o layout do main funcione com flex */
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+.title {
+  color: #001525;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 1rem;
+  width: 50rem;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3d0000;
+}
+
+.info {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: gray;
+}
+
+header {
+  margin-bottom: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+input {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  width: 32.7rem;
+  border: none;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+}
+
+input:focus {
+  border: none;
+  border-bottom: 1px solid blue;
+  background-color: transparent;
+}
+
+.rates {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 16rem;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  border-radius: 0.5rem;
+  box-shadow: 1px 5px 10px black;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border: 2px solid #3d0000;
+  box-shadow: none;
+}
+
+.pdf {
+  transition: 0.5s;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  background-color: #001525;
+  color: #f2f2f2;
+  box-shadow: 1px 5px 5px black;
+}
+
+.pdf:hover {
+  box-shadow: 1px 1px 2px gray;
+}
+
+.mesage {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  nav {
+    padding: 1rem 4rem;
+  }
+
+  .description {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .rates {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description p.sub-title {
+    font-size: 1rem;
+  }
+
+  .info {
+    font-size: 0.7rem;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1rem;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description p.sub-title {
+    font-size: 0.9rem;
+  }
+
+  .info {
+    font-size: 0.6rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .pdf {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description p.sub-title {
+    font-size: 0.8rem;
+  }
+
+  .info {
+    font-size: 0.5rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .pdf {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
