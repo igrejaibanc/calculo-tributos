@@ -19,8 +19,8 @@ function updateInterface(remuneration) {
   const totalDiv = document.getElementById("total");
 
   if (!isNaN(remuneration) && remuneration > 0) {
-    const fist = Math.round(remuneration / 30);
-    const tenth = Math.round((remuneration - fist) * 0.1);
+    const fist = Math.ceil(remuneration / 30);
+    const tenth = Math.ceil((remuneration - fist) * 0.1);
     const total = fist + tenth;
 
     tenthDiv.textContent = `(10%): R$ ${formatCurrency(tenth)}`;
